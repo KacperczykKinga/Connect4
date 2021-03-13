@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Rozgrywka.cs" />
     <Compile Include="Assets\Scripts\RozpocznijGre.cs" />
     <Compile Include="Assets\Scripts\RuchCzlowieka.cs" />
+    <Compile Include="Assets\Scripts\SpreadMenu.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\onePlayerWybrane.cs" />
     <Compile Include="Assets\Scripts\wybrane.cs" />
