@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\ColorMenu.cs" />
     <Compile Include="Assets\Scripts\Credits.cs" />
     <Compile Include="Assets\Scripts\Exit.cs" />
+    <Compile Include="Assets\Scripts\FullMenu.cs" />
     <Compile Include="Assets\Scripts\GenerowanieZetonow.cs" />
     <Compile Include="Assets\Scripts\Gracz.cs" />
     <Compile Include="Assets\Scripts\Info.cs" />

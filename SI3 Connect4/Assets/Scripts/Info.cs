@@ -7,7 +7,7 @@ public class Info : ScriptableObject
     public string pierwszyGracz = "";
     public string drugiGracz = "";
     public string kolejnosc = "";
-    public string kolorPierwszy = ""; ///popracuj nad tymi dwoma by miec 3 kolory
+    public string kolorPierwszy = "";
     public string kolorDrugi = "";
     public int rzad = 0;
     public bool czyKoniec = false;
@@ -42,5 +42,33 @@ public class Info : ScriptableObject
         {
             return instance;
         }
+    }
+
+    public void restartGame()
+    {    
+        kolejnosc = ""; 
+        rzad = 0; 
+        czyKoniec = false; 
+        czy = false; 
+        poOpadnieciu = false; 
+        liczbaRuchow = 0; 
+        kolumnaCzlowieka = 0; 
+        nowyRuchCzlowieka = false;     
+        blad = false;
+        wykonywanyRuch = false;
+        kolorWrzucanegoZetonu = "C"; 
+        tuJuzNie = false; 
+        zmiana = true; 
+}
+
+    public void resetGame()
+    {
+        pierwszyGracz = "";
+        drugiGracz = "";
+        kolorPierwszy = "";
+        kolorDrugi = "";
+        czyCzlowiek1 = false;
+        czyCzlowiek2 = false;
+        restartGame();
     }
 }
