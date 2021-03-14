@@ -6,13 +6,16 @@ using UnityEngine.UI;
 public class Napis : MonoBehaviour
 {
     public GameObject secondPlayer, fPCOn, fPCOut, sPCOn, sPCOut, tloKonca, wygrana, tuNie;
+    public GameObject centerMenu, sideMenu;
     public Sprite machine, red, green;
 
     // Start is called before the first frame update
     void Start()
     {
         tloKonca.SetActive(false);
-        if(Info.Instance.drugiGracz == "MASZYNA")
+        centerMenu.SetActive(false);
+        sideMenu.SetActive(true);
+        if (Info.Instance.drugiGracz == "MASZYNA")
         {
             secondPlayer.GetComponent<SpriteRenderer>().sprite = machine;
         }
@@ -73,11 +76,16 @@ public class Napis : MonoBehaviour
             else if (wygrany == "CZLOWIEK 2") wygrany = "Player 2";
             else if (wygrany == "MASZYNA") wygrany = "Computer";
             wygrana.GetComponent<UnityEngine.UI.Text>().text = wygrany + " won";
+            centerMenu.SetActive(true);
+            sideMenu.SetActive(false);
+
         }
         else if(Info.Instance.liczbaRuchow == 42)
         {
             wygrana.SetActive(true);
             wygrana.GetComponent<UnityEngine.UI.Text>().text = "Remis";
+            centerMenu.SetActive(true);
+            sideMenu.SetActive(false);
         }
         else if(Info.Instance.tuJuzNie)
         {
@@ -87,5 +95,7 @@ public class Napis : MonoBehaviour
         {
             tuNie.SetActive(false);
         }
+
+
     }
 }
