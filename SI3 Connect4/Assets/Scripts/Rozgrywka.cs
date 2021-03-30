@@ -32,23 +32,16 @@ public class Rogzrywka : ScriptableObject
         {
             Info.Instance.kolorWrzucanegoZetonu = "C";
             czerwony.podajRzad(this);
-          //  Info.Instance.czyKoniec = czyRuchWygral(czerwony);
         }
         else
         {
             Info.Instance.kolorWrzucanegoZetonu = "Z";
             zolty.podajRzad(this);
-          //  Info.Instance.czyKoniec = czyRuchWygral(zolty);
         }
-        Debug.Log(Info.Instance.kolorWrzucanegoZetonu);
-
     }
 
     public Boolean czyRuchWygral(Gracz gracz, int rzadDoKtoregoChceWrzucic)
     {
-       // Thread.Sleep(1000);
-        
-
         int kolumnaDoKtorejRzucil = planszaRozgrywki.wrzucZeton(gracz.kolor, rzadDoKtoregoChceWrzucic,"ja pitole");
         if (kolumnaDoKtorejRzucil != -1)
         {
@@ -63,7 +56,6 @@ public class Rogzrywka : ScriptableObject
             {
                 Info.Instance.kolejnosc = Info.Instance.pierwszyGracz;
             }
-            //   Debug.Log(Info.Instance.kolejnosc);
             Info.Instance.zmiana = true;
             return planszaRozgrywki.czyKoniec(gracz.kolor, kolumnaDoKtorejRzucil);
         }
@@ -71,9 +63,6 @@ public class Rogzrywka : ScriptableObject
         {
             Info.Instance.tuJuzNie = true;
             return false;
-        }
-
-
-        
+        }       
     }
 }

@@ -24,6 +24,7 @@ public class Info : ScriptableObject
     public bool tuJuzNie = false;
     public int glebokosc = 6;
     public bool zmiana = true;
+    public bool canNext = true;
     private static readonly Info instance = new Info();
 
     // Explicit static constructor to tell C# compiler

@@ -6,6 +6,7 @@ public class RuchCzlowieka : MonoBehaviour
 {
     float krok = 1.52f;
     float start = -5.34f;
+    float x = 0f;
     public GameObject row1, row2, row3, row4, row5, row6, row7;
 
     private void Start()
@@ -18,23 +19,30 @@ public class RuchCzlowieka : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !Info.Instance.wykonywanyRuch && Info.Instance.kolejnosc.Contains("CZLO") && Info.Instance.poOpadnieciu)
         {
+            Debug.Log("Tutaj dzialam");
             bool onBoard = false;
-            float x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
-        //    Info.Instance.kolejnosc = x.ToString();
-            for(int i = 1; i < 8; i++)
+                
+            x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
+            for (int i = 1; i < 8; i++)
             {
-                if(x > start + (i-1) * krok && x < start + i * krok)
-                {
-                    Info.Instance.kolumnaCzlowieka = i - 1;
-                    onBoard = true;
-                    allRowsHides();
+                    if (x > start + (i - 1) * krok && x < start + i * krok)
+                    {
+                        Info.Instance.kolumnaCzlowieka = i - 1;
+                        onBoard = true;
+                        allRowsHides();
+                    }
                 }
-            }
-            if (onBoard)
-            {
-                Info.Instance.poOpadnieciu = false;
-                Info.Instance.nowyRuchCzlowieka = true;
-            }
+                if (onBoard)
+                {
+                    //    Info.Instance.kolejnosc = x.ToString();
+                   
+                if(Info.Instance.canNext)
+                {
+                    Info.Instance.nowyRuchCzlowieka = true;
+                    StartCoroutine("WaitForFall");
+                }
+                }
+            
         }
 
         if (!Info.Instance.kolejnosc.Contains("CZLO") || Info.Instance.poOpadnieciu == false)
@@ -75,5 +83,13 @@ public class RuchCzlowieka : MonoBehaviour
         row5.SetActive(false);
         row6.SetActive(false);
         row7.SetActive(false);
+    }
+
+    IEnumerator WaitForFall()
+    {
+        Info.Instance.canNext = false;
+        Info.Instance.poOpadnieciu = false;
+        yield return new WaitForSeconds(1f);
+        Info.Instance.canNext = true;
     }
 }
