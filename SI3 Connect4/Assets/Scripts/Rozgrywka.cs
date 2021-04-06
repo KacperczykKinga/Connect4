@@ -62,6 +62,7 @@ public class Rogzrywka : ScriptableObject
         else
         {
             Info.Instance.tuJuzNie = true;
+            Info.Instance.poOpadnieciu = true;
             return false;
         }       
     }
