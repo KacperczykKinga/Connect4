@@ -8,7 +8,7 @@ public class Napis : MonoBehaviour
     public GameObject secondPlayer, fPCOn, fPCOut, sPCOn, sPCOut, tloKonca, wygrana, tuNie;
     public GameObject centerMenu, sideMenu;
     public Sprite machine, red, green;
-    public AudioSource winSound, loseSound;
+    public AudioSource winSound, loseSound, remisSound;
 
     bool finished = false;
 
@@ -72,10 +72,11 @@ public class Napis : MonoBehaviour
         }
         else if(Info.Instance.liczbaRuchow == 42)
         {
-            wygrana.SetActive(true);
-            wygrana.GetComponent<UnityEngine.UI.Text>().text = "Remis";
-            centerMenu.SetActive(true);
-            sideMenu.SetActive(false);
+            if (!finished)
+            {
+                endGameRemis();
+                finished = true;
+            }
         }
         else if(Info.Instance.tuJuzNie)
         {
@@ -87,6 +88,16 @@ public class Napis : MonoBehaviour
         }
 
 
+    }
+
+    void endGameRemis()
+    {
+        remisSound.Play();
+        tloKonca.SetActive(true);
+        wygrana.SetActive(true);
+        wygrana.GetComponent<UnityEngine.UI.Text>().text = "Remis";
+        centerMenu.SetActive(true);
+        sideMenu.SetActive(false);
     }
 
     void endGameWin()
