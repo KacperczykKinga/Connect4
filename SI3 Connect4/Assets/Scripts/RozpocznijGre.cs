@@ -11,6 +11,25 @@ public class RozpocznijGre : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(Info.Instance.kolejnosc);
+        Debug.Log(Info.Instance.rzad);
+        Debug.Log(Info.Instance.czyKoniec);
+        Debug.Log(Info.Instance.czy);
+        Debug.Log(Info.Instance.poOpadnieciu);
+        Debug.Log(Info.Instance.liczbaRuchow);
+        Debug.Log(Info.Instance.kolumnaCzlowieka);
+        Debug.Log(Info.Instance.nowyRuchCzlowieka);
+        Debug.Log(Info.Instance.blad);
+        Debug.Log(Info.Instance.wykonywanyRuch);
+        Debug.Log(Info.Instance.kolorWrzucanegoZetonu);
+        Debug.Log(Info.Instance.tuJuzNie);
+        Debug.Log(Info.Instance.zmiana);
+        Debug.Log(Info.Instance.pierwszyGracz);
+        Debug.Log(Info.Instance.drugiGracz);
+        Debug.Log(Info.Instance.kolorPierwszy);
+        Debug.Log(Info.Instance.kolorDrugi);
+        Debug.Log(Info.Instance.czyCzlowiek1);
+        Debug.Log(Info.Instance.czyCzlowiek2);
         gra = new Rogzrywka();
         Info.Instance.poOpadnieciu = true;
         Info.Instance.kolejnosc = Info.Instance.pierwszyGracz;   
@@ -28,7 +47,6 @@ public class RozpocznijGre : MonoBehaviour
             if (Info.Instance.tuJuzNie && Info.Instance.nowyRuchCzlowieka)
             {
                 nextMove();
-                Debug.Log("TAAAAAAAAAAAk");
                 Info.Instance.tuJuzNie = false;
             }
             else

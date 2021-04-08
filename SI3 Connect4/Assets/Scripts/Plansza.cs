@@ -63,19 +63,16 @@ public class Plansza : ScriptableObject
                 if (polaWPlanszy[kolumna, rzad].pokazKolor().Equals(kolor) && polaWPlanszy[kolumna + 1, rzad].pokazKolor().Equals(kolor) &&
                     polaWPlanszy[kolumna + 2, rzad].pokazKolor().Equals(kolor) && polaWPlanszy[kolumna + 3, rzad].pokazKolor().Equals(kolor))
                 {
-                    Debug.Log("koniec");
                     return true;
                 }
                 if (rzad >= 3 && polaWPlanszy[kolumna, rzad].pokazKolor().Equals(kolor) && polaWPlanszy[kolumna + 1, rzad - 1].pokazKolor().Equals(kolor) &&
                     polaWPlanszy[kolumna + 2, rzad - 2].pokazKolor().Equals(kolor) && polaWPlanszy[kolumna + 3, rzad - 3].pokazKolor().Equals(kolor))
                 {
-                    Debug.Log("koniec");
                     return true;
                 }
                 if (rzad <= 3 && polaWPlanszy[kolumna, rzad].pokazKolor().Equals(kolor) && polaWPlanszy[kolumna + 1, rzad + 1].pokazKolor().Equals(kolor) &&
                     polaWPlanszy[kolumna + 2, rzad + 2].pokazKolor().Equals(kolor) && polaWPlanszy[kolumna + 3, rzad + 3].pokazKolor().Equals(kolor))
                 {
-                    Debug.Log("koniec");
                     return true;
                 }
             }
@@ -90,7 +87,6 @@ public class Plansza : ScriptableObject
                 liczbaWKolumnie++;
                 if (liczbaWKolumnie == 4)
                 {
-                    Debug.Log("koniec");
                     return true;
                 }
             }

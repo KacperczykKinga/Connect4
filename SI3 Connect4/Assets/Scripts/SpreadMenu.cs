@@ -90,21 +90,17 @@ public class SpreadMenu : MonoBehaviour
 
     public void clickOnMenuButton()
     {
-        Debug.Log("clicked");
         if(!menu)
         {
             clicked = true;
             menu = true;
-            menuButton.GetComponent<Image>().sprite = menuIn;
-            Debug.Log("clicked in");
-         
+            menuButton.GetComponent<Image>().sprite = menuIn;       
         }
         else
         {
             menu = false;
             clicked = true;
             menuButton.GetComponent<Image>().sprite = menuOut;
-            Debug.Log("clicked out");
         }
     }
 

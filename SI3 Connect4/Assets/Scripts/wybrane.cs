@@ -76,12 +76,6 @@ public class wybrane : MonoBehaviour
 
     public void startGame()
     {
-        Debug.Log("AAAAAAAAAAAa");
-        Debug.Log(Info.Instance.pierwszyGracz);
-        Debug.Log(Info.Instance.drugiGracz);
-        Debug.Log(Info.Instance.kolorPierwszy);
-        Debug.Log(Info.Instance.kolorDrugi);
-        Debug.Log(Info.Instance.liczbaRuchow);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

@@ -8,6 +8,9 @@ public class Napis : MonoBehaviour
     public GameObject secondPlayer, fPCOn, fPCOut, sPCOn, sPCOut, tloKonca, wygrana, tuNie;
     public GameObject centerMenu, sideMenu;
     public Sprite machine, red, green;
+    public AudioSource winSound, loseSound;
+
+    bool finished = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,24 +63,11 @@ public class Napis : MonoBehaviour
 
         if (Info.Instance.czyKoniec)
         {
-            tloKonca.SetActive(true);
-            wygrana.SetActive(true);
-            string wygrany = Info.Instance.kolejnosc;
-            if (Info.Instance.kolorWrzucanegoZetonu.Equals("Z"))
+            if(!finished)
             {
-                wygrany = Info.Instance.drugiGracz;
+                endGameWin();
+                finished = true;
             }
-            else
-            {
-                wygrany = Info.Instance.pierwszyGracz;
-            }
-            if (wygrany == "CZLOWIEK") wygrany = "Player";
-            else if (wygrany == "CZLOWIEK 1") wygrany = "Player 1";
-            else if (wygrany == "CZLOWIEK 2") wygrany = "Player 2";
-            else if (wygrany == "MASZYNA") wygrany = "Computer";
-            wygrana.GetComponent<UnityEngine.UI.Text>().text = wygrany + " won";
-            centerMenu.SetActive(true);
-            sideMenu.SetActive(false);
 
         }
         else if(Info.Instance.liczbaRuchow == 42)
@@ -97,6 +87,31 @@ public class Napis : MonoBehaviour
         }
 
 
+    }
+
+    void endGameWin()
+    {
+        tloKonca.SetActive(true);
+        wygrana.SetActive(true);
+        string wygrany = Info.Instance.kolejnosc;
+        if (Info.Instance.kolorWrzucanegoZetonu.Equals("Z"))
+        {
+            wygrany = Info.Instance.drugiGracz;
+        }
+        else
+        {
+            wygrany = Info.Instance.pierwszyGracz;
+        }
+        if (wygrany == "CZLOWIEK") wygrany = "Player";
+        else if (wygrany == "CZLOWIEK 1") wygrany = "Player 1";
+        else if (wygrany == "CZLOWIEK 2") wygrany = "Player 2";
+        else if (wygrany == "MASZYNA") wygrany = "Computer";
+
+        if (wygrany.Contains("Player")) winSound.Play();
+        else loseSound.Play();
+        wygrana.GetComponent<UnityEngine.UI.Text>().text = wygrany + " won";
+        centerMenu.SetActive(true);
+        sideMenu.SetActive(false);
     }
 
 }

@@ -59,7 +59,8 @@ public class Info : ScriptableObject
         wykonywanyRuch = false;
         kolorWrzucanegoZetonu = "C"; 
         tuJuzNie = false; 
-        zmiana = true; 
+        zmiana = true;
+        canNext = true;
 }
 
     public void resetGame()

@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     Info info;
     public GameObject orange;
+    public AudioSource clickButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,13 @@ public class MainMenu : MonoBehaviour
     
     public void credits()
     {
+        clickButton.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void CzlowiekvsCzlowiek()
     {
+        clickButton.Play();
         info.pierwszyGracz = "CZLOWIEK";
         info.drugiGracz = "CZLOWIEK";
         info.czyCzlowiek1 = true;
@@ -35,6 +39,7 @@ public class MainMenu : MonoBehaviour
 
     public void CzlowiekvsMaszyna()
     {
+        clickButton.Play();
         info.pierwszyGracz = "CZLOWIEK";
         info.drugiGracz = "MASZYNA";
         info.czyCzlowiek1 = true;

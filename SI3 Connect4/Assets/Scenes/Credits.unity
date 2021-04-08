@@ -1248,7 +1248,8 @@ MonoBehaviour:
     2020 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/admiralbob77/62876\nThe
     night is calling by Kraftamt (c) copyright 2020 Licensed under a Creative Commons
     Attribution (3.0) license. http://dig.ccmixter.org/files/Karstenholymoly/62739
-    \n\nFont: Architext created by Grant Marschall from https://www.1001fonts.com/ "
+    \n\nFont: Architext created by Grant Marschall from https://www.1001fonts.com/
+    \n\nSound effects: https://mixkit.co/"
 --- !u!222 &2115762234
 CanvasRenderer:
   m_ObjectHideFlags: 0

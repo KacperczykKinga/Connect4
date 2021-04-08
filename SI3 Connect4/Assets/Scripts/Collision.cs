@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,6 @@ public class Collision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("KOLIZJA");
         Info.Instance.poOpadnieciu = true;
         Info.Instance.wykonywanyRuch = false;
     }
