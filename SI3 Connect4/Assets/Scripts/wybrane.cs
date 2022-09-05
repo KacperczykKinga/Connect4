@@ -9,6 +9,7 @@ public class wybrane : MonoBehaviour
     public GameObject secondP, secondC;
     public GameObject firstY, firstR, firstG;
     public GameObject secondY, secondR, secondG;
+    public AudioSource menuSound;
 
     // Start is called before the first frame update
     void Start()
@@ -76,11 +77,13 @@ public class wybrane : MonoBehaviour
 
     public void startGame()
     {
+        menuSound.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void backToHome()
     {
+        menuSound.Play();
         SceneManager.LoadScene(0);
     }
 

@@ -8,6 +8,7 @@ public class SpreadMenu : MonoBehaviour
     private bool menu, clicked;
     public GameObject menuButton, reload, home, end;
     public Sprite menuIn, menuOut;
+    public AudioSource menuSound;
     private int reloadNumber, homeNumber, endNumber;
 
     void Start()
@@ -90,6 +91,7 @@ public class SpreadMenu : MonoBehaviour
 
     public void clickOnMenuButton()
     {
+        menuSound.Play();
         if(!menu)
         {
             clicked = true;

@@ -8,7 +8,7 @@ public class onePlayerWybrane : MonoBehaviour
 {
     public GameObject start;
     public GameObject cYellow, cRed, cGreen;
-    public AudioSource fruitSound;
+    public AudioSource fruitSound, menuSound;
     bool rYellow, rRed, rGreen;
     Info info;
 
@@ -55,11 +55,13 @@ public class onePlayerWybrane : MonoBehaviour
 
     public void goHome()
     {
+        menuSound.Play();
         SceneManager.LoadScene(0);
     }
 
     public void startPlay()
     {
+        menuSound.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

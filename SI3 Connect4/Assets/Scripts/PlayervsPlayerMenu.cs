@@ -11,7 +11,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
     public GameObject cSYellow, cSRed, cSGreen;
     public GameObject lFYellow, lFRed, lFGreen;
     public GameObject lSYellow, lSRed, lSGreen;
-    public AudioSource fruitSound;
+    public AudioSource fruitSound, menuSound;
     bool rFYellow, rFRed, rFGreen;
     bool rSYellow, rSRed, rSGreen;
     Info info;
@@ -90,11 +90,13 @@ public class PlayervsPlayerMenu : MonoBehaviour
 
     public void goHome()
     {
+        menuSound.Play();
         SceneManager.LoadScene(0);
     }
 
     public void startPlay()
     {
+        menuSound.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
