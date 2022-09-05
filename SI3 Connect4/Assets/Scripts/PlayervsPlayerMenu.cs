@@ -11,6 +11,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
     public GameObject cSYellow, cSRed, cSGreen;
     public GameObject lFYellow, lFRed, lFGreen;
     public GameObject lSYellow, lSRed, lSGreen;
+    public AudioSource fruitSound;
     bool rFYellow, rFRed, rFGreen;
     bool rSYellow, rSRed, rSGreen;
     Info info;
@@ -109,6 +110,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
         rFYellow = true;
         rFRed = false;
         rFGreen = false;
+        fruitSound.Play();
         if (info.kolorPierwszy != "" && info.kolorDrugi != "") start.SetActive(true);
     }
 
@@ -124,6 +126,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
         rFYellow = false;
         rFRed = true;
         rFGreen = false;
+        fruitSound.Play();
         if (info.kolorPierwszy != "" && info.kolorDrugi != "") start.SetActive(true);
     }
 
@@ -139,6 +142,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
         rFYellow = false;
         rFRed = false;
         rFGreen = true;
+        fruitSound.Play();
         if (info.kolorPierwszy != "" && info.kolorDrugi != "") start.SetActive(true);
     }
 
@@ -154,6 +158,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
         rSYellow = true;
         rSRed = false;
         rSGreen = false;
+        fruitSound.Play();
         if (info.kolorPierwszy != "" && info.kolorDrugi != "") start.SetActive(true);
     }
 
@@ -169,6 +174,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
         rSYellow = false;
         rSRed = true;
         rSGreen = false;
+        fruitSound.Play();
         if (info.kolorPierwszy != "" && info.kolorDrugi != "") start.SetActive(true);
     }
 
@@ -184,6 +190,7 @@ public class PlayervsPlayerMenu : MonoBehaviour
         rSYellow = false;
         rSRed = false;
         rSGreen = true;
+        fruitSound.Play();
         if (info.kolorPierwszy != "" && info.kolorDrugi != "") start.SetActive(true);
     }
 

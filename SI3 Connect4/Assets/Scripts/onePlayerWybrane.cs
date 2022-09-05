@@ -8,6 +8,7 @@ public class onePlayerWybrane : MonoBehaviour
 {
     public GameObject start;
     public GameObject cYellow, cRed, cGreen;
+    public AudioSource fruitSound;
     bool rYellow, rRed, rGreen;
     Info info;
 
@@ -72,6 +73,7 @@ public class onePlayerWybrane : MonoBehaviour
         rRed = false;
         rGreen = false;
         secondColor("Y");
+        fruitSound.Play();
     }
 
     public void firstRed()
@@ -84,6 +86,7 @@ public class onePlayerWybrane : MonoBehaviour
         rRed = true;
         rGreen = false;
         secondColor("R");
+        fruitSound.Play();
     }
 
     public void firstGreen()
@@ -96,6 +99,7 @@ public class onePlayerWybrane : MonoBehaviour
         rRed = false;
         rGreen = true;
         secondColor("G");
+        fruitSound.Play();
     }
 
     public void secondColor(string kolor)
