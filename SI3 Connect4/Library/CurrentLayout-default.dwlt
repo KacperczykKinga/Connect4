@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 680, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
-  controlID: 124
+  controlID: 125
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 300
     height: 446
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 58
+  controlID: 84
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -403,34 +403,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Kinga\Documents\GitHub\Connect4\Connect4\SI3 Connect4
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 30}
-    m_SelectedIDs: d83a0000
-    m_LastClickedID: 15064
+    m_SelectedIDs: da3a0000
+    m_LastClickedID: 15066
     m_ExpandedIDs: 00000000a43a0000a63a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Prefab
+      m_OriginalName: Prefab
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 15062
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -471,22 +471,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300000000000072410000463c0000b8620000083b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Credits
+      m_OriginalName: Credits
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 15070
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -567,9 +567,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e43a0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 78f8fffff6f8ffff28faffffd0faffff62fbffff
+      m_SelectedIDs: c6830000
+      m_LastClickedID: 33734
+      m_ExpandedIDs: 5ec8ffff0aceffff58cfffff1eddffffb0ddffffa6deffff2edfffff8adfffff1ee0ffff06e1ffff8ee1ffff66e2ffff26e4ffff1ee6ffffe2e6ffff22e7ffff68e7ffff2ee9ffff1eeaffff08edffffccedffffb8efffff50f6ffff62fbffff7c3900008c39000082460000a64600000e4700002247000052470000aa4c0000f64c0000064d0000244d0000be4f00008a500000f25000003651000068580000785800009c5800008259000092590000b8590000285e0000605e00008a5e00002c64000068640000926400008e660000ae660000d66600006c6b0000726b00003e6e0000446e0000cc7200002c760000e07c00004a7d0000727d0000e67d0000e4820000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -629,9 +629,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 375.0439, y: 106.80453, z: -71.50727}
+    m_Target: {x: 276.83914, y: -29.509563, z: -30.534466}
     speed: 2
-    m_Value: {x: 375.0439, y: 106.80453, z: -71.50727}
+    m_Value: {x: 276.83914, y: -29.509563, z: -30.534466}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -681,9 +681,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 165.84184
     speed: 2
-    m_Value: 10
+    m_Value: 165.84184
   m_Ortho:
     m_Target: 1
     speed: 2
