@@ -8,6 +8,7 @@ public class SpreadMenu : MonoBehaviour
     private bool menu, clicked;
     public GameObject menuButton, reload, home, end;
     public Sprite menuIn, menuOut;
+
     public AudioSource menuSound;
     private int reloadNumber, homeNumber, endNumber;
 
@@ -15,9 +16,9 @@ public class SpreadMenu : MonoBehaviour
     {
         menu = false;
         clicked = false;
-        reloadNumber = 50;
-        homeNumber = 100;
-        endNumber = 150;
+        reloadNumber = 120;
+        homeNumber = 240;
+        endNumber = 360;
         reload.SetActive(false);
         home.SetActive(false);
         end.SetActive(false);
@@ -56,33 +57,33 @@ public class SpreadMenu : MonoBehaviour
         else if(clicked && !menu)
         {
           
-            if (reloadNumber < 50)
+            if (reloadNumber < 120)
             {
                 Transform transform = reload.GetComponent<Transform>();
                 transform.Translate(new Vector3(0, -1f, 0));
                 reloadNumber++;
             }
-            if (homeNumber < 100)
+            if (homeNumber < 240)
             {
                 Transform transform = home.GetComponent<Transform>();
                 transform.Translate(new Vector3(0, -1f, 0));
                 homeNumber++;
             }
-            if (endNumber < 150)
+            if (endNumber < 360)
             {
                 Transform transform = end.GetComponent<Transform>();
                 transform.Translate(new Vector3(0, -1f, 0));
                 endNumber++;
             }
-            if(reloadNumber > 30)
+            if(reloadNumber > 70)
             {
                 reload.SetActive(false);
             }
-            if(homeNumber > 80)
+            if(homeNumber > 130)
             {
                 home.SetActive(false);
             }
-            if(endNumber > 130)
+            if(endNumber > 200)
             {
                 end.SetActive(false);
             }
