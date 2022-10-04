@@ -95,7 +95,7 @@ public class Napis : MonoBehaviour
         remisSound.Play();
         tloKonca.SetActive(true);
         wygrana.SetActive(true);
-        wygrana.GetComponent<UnityEngine.UI.Text>().text = "Remis";
+        wygrana.GetComponent<UnityEngine.UI.Text>().text = "Draw";
         centerMenu.SetActive(true);
         sideMenu.SetActive(false);
     }

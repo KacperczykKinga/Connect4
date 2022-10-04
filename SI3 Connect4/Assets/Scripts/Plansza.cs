@@ -33,11 +33,10 @@ public class Plansza : ScriptableObject
         return true;
     }
 
-    public int wrzucZeton(String kolor, int miejsce, String info)
+    public int wrzucZeton(String kolor, int miejsce)
     {
         int pierwszeWolne = 5;
-
-      //  Debug.Log(miejsce + " " + info);
+        
         while (pierwszeWolne >= 0 && !polaWPlanszy[pierwszeWolne, miejsce].pokazKolor().Equals("P"))
         {
             pierwszeWolne--;

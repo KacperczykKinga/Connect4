@@ -19,7 +19,6 @@ public class RuchCzlowieka : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !Info.Instance.wykonywanyRuch && Info.Instance.kolejnosc.Contains("CZLO") && Info.Instance.poOpadnieciu)
         {
-            Debug.Log("Tutaj dzialam");
             bool onBoard = false;
                 
             x = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
@@ -31,9 +30,9 @@ public class RuchCzlowieka : MonoBehaviour
                         onBoard = true;
                         allRowsHides();
                     }
-                }
-                if (onBoard)
-                {
+            }
+            if (onBoard)
+            {
                     //    Info.Instance.kolejnosc = x.ToString();
                    
                 if(Info.Instance.canNext)
@@ -41,7 +40,7 @@ public class RuchCzlowieka : MonoBehaviour
                     Info.Instance.nowyRuchCzlowieka = true;
                     StartCoroutine("WaitForFall");
                 }
-                }
+            }
             
         }
 
@@ -89,7 +88,7 @@ public class RuchCzlowieka : MonoBehaviour
     {
         Info.Instance.canNext = false;
         Info.Instance.poOpadnieciu = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         Info.Instance.canNext = true;
     }
 }

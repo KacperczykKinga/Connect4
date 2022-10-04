@@ -42,7 +42,7 @@ public class Rogzrywka : ScriptableObject
 
     public Boolean czyRuchWygral(Gracz gracz, int rzadDoKtoregoChceWrzucic)
     {
-        int kolumnaDoKtorejRzucil = planszaRozgrywki.wrzucZeton(gracz.kolor, rzadDoKtoregoChceWrzucic,"ja pitole");
+        int kolumnaDoKtorejRzucil = planszaRozgrywki.wrzucZeton(gracz.kolor, rzadDoKtoregoChceWrzucic);
         if (kolumnaDoKtorejRzucil != -1)
         {
             Info.Instance.rzad = rzadDoKtoregoChceWrzucic;

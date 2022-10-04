@@ -30,7 +30,7 @@ public class Gracz : ScriptableObject
         {
             int i = kolumnyDoWykorzystania[losowacz.Next(0, kolumnyDoWykorzystania.Count)];
             kolumnyDoWykorzystania.Remove(i);
-            int kolumna = planszaNaKtorejGra.wrzucZeton(kolor, i, "o kurdelebele");
+            int kolumna = planszaNaKtorejGra.wrzucZeton(kolor, i);
             if (kolumna != -1)
             {
                 int ocenaSciezki = 0;
@@ -119,7 +119,7 @@ public class Gracz : ScriptableObject
             for (int i = 0; i < 7; i++)
             {
                
-                int kolumna = planszaNaKtorejGra.wrzucZeton(kolorGracza, i , "fuck");
+                int kolumna = planszaNaKtorejGra.wrzucZeton(kolorGracza, i);
                 if (kolumna != -1)
                 {
                     int ocenaSciezki = alfaBeta(glebokoscDrzewa - 1, kolorGracza.Equals("C") ? "Z" : "C", i, kolumna, kolorGracza, alfa, beta);
@@ -140,7 +140,7 @@ public class Gracz : ScriptableObject
         {
             for (int i = 0; i < 7; i++)
             {
-                int kolumna = planszaNaKtorejGra.wrzucZeton(kolorGracza, i, "kuxwa");
+                int kolumna = planszaNaKtorejGra.wrzucZeton(kolorGracza, i);
                 if (kolumna != -1)
                 {
                     int ocenaSciezki = alfaBeta(glebokoscDrzewa - 1, kolorGracza.Equals("C") ? "Z" : "C", i, kolumna, kolorGracza, alfa, beta);
